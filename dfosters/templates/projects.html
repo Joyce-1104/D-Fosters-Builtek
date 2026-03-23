@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page-section ">
+<h1>OUR PROJECTS</h1>
+
+<div class="gallery reveal">
+    {% for project in projects %}
+        <img src="{{ project.image.url }}" alt="{{ project.title }}">
+    {% empty %}
+        <p>No projects uploaded yet.</p>
+    {% endfor %}
+  
+</div>
+</section>
+{% endblock %}

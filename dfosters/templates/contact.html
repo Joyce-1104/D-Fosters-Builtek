@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="contact-section">
+
+  <!-- Heading -->
+  <div class="contact-header reveal">
+    <h1>CONTACT US</h1>
+    <strong>
+      <p>LET'S DISCUSS YOUR INTERIOR & WINDOW REQUIREMENTS</p>
+    </strong>
+  </div>
+
+  <!-- ================= FORMS (FIRST ROW) ================= -->
+  <div class="forms-grid">
+
+    <!-- BOOK CONSULTATION -->
+    <div class="form-box reveal">
+      <h2>Book a Free Consultation</h2>
+
+      <form method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Email Address">
+        <textarea name="message" rows="4"
+          placeholder="Tell us about your requirement"></textarea>
+
+        <button type="submit" class="btn-primary">
+          Book Consultation
+        </button>
+      </form>
+    </div>
+
+    <!-- GET ESTIMATE -->
+    <div class="form-box estimate reveal">
+      <h2>Get an Estimate</h2>
+
+      <form method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <select name="service" required>
+          <option value="">Select Service</option>
+          <option>Interior Design</option>
+          <option>Modular Kitchen</option>
+          <option>Windows & Doors</option>
+          <option>False Ceiling</option>
+        </select>
+
+        <input type="text" name="location" placeholder="Project Location">
+        <textarea name="details" rows="4"
+          placeholder="Project details (size, type, budget)"></textarea>
+
+        <button type="submit" class="btn-secondary">
+          Get Estimate
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- ================= CONTACT DETAILS + MAP (SECOND ROW) ================= -->
+  <div class="contact-grid">
+
+    <!-- Contact Details -->
+    <div class="contact-info reveal">
+      <h3>Get in Touch</h3>
+
+      <p>
+        <strong>📍 Address</strong><br>
+        No. 7/143,Kundrathur Main Road, Kovur,Chennai, Tamil Nadu, India.
+      </p>
+
+      <p>
+        <strong>📞 Phone</strong><br>
+        +91 8939691020 , +91 9884471020
+      </p>
+
+      <p>
+        <strong>✉️ Email</strong><br>
+        dfosters@gmail.com
+      </p>
+    </div>
+
+    <!-- Map -->
+    <div class="contact-map reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.4100420852396!2d80.11608707984797!3d13.009539954587245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260400cb56e8b%3A0xa5bc623486cf1ec6!2s7%2F143%2C%20Kundrathur%20Main%20Rd%2C%20Kovur%2C%20Adilakshmi%20Nagar%2C%20Tharapakkam%2C%20Chennai%2C%20Thandalam%2C%20Tamil%20Nadu%20600128!5e0!3m2!1sen!2sin!4v1774246636061!5m2!1sen!2sin"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="page-section">
+    <h1>WHAT WE OFFER</h1>
+
+    <div class="services-grid reveal">
+
+        <!-- SERVICE 1 -->
+        <div class="service-box">
+            <img src="{% static 'images/p1.png' %}" alt="Interior Design" style="width:100%; border-radius:14px; margin-bottom:16px;">
+            <h3>Interior Design</h3>
+            <p>
+                End-to-end interior design solutions for residential and commercial spaces.
+                We focus on elegance, comfort, and functionality.
+            </p>
+        </div>
+
+        <!-- SERVICE 2 -->
+        <div class="service-box">
+            <img src="{% static 'images/p6.jpg' %}" alt="Modular Kitchen" style="width:100%; border-radius:14px; margin-bottom:16px;">
+            <h3>Modular Kitchen</h3>
+            <p>
+                Custom modular kitchens designed for efficiency, durability, and modern living,
+                using premium materials and finishes.
+            </p>
+        </div>
+
+        <!-- SERVICE 3 -->
+        <div class="service-box">
+            <img src="{% static 'images/p5.png' %}" alt="Windows Installation" style="width:100%; border-radius:14px; margin-bottom:16px;">
+            <h3>Windows Installation</h3>
+            <p>
+                High-quality UPVC and aluminum windows that offer insulation, security,
+                and long-term performance.
+            </p>
+        </div>
+
+        <!-- SERVICE 4 -->
+        <div class="service-box">
+            <img src="{% static 'images/p7.jpg' %}" alt="Doors Installation" style="width:100%; border-radius:14px; margin-bottom:16px;">
+            <h3>Doors Installation</h3>
+            <p>
+                Stylish and durable doors for homes, offices, and commercial buildings,
+                designed to enhance aesthetics and safety.
+            </p>
+        </div>
+
+        <!-- SERVICE 5 -->
+        <div class="service-box">
+            <img src="{% static 'images/p8.jpg' %}" alt="False Ceiling" style="width:100%; border-radius:14px; margin-bottom:16px;">
+            <h3>False Ceiling & Wall Panels</h3>
+            <p>
+                Modern false ceiling and wall panel designs that improve lighting,
+                acoustics, and overall interior appeal.
+            </p>
+        </div>
+
+        <!-- SERVICE 6 -->
+        <div class="service-box">
+            <img src="{% static 'images/p4.jpg' %}" alt="Renovation" style="width:100%; border-radius:14px; margin-bottom:16px;">
+            <h3>Renovation & Remodeling</h3>
+            <p>
+                Complete renovation services for homes and commercial spaces,
+                executed with precision and quality workmanship.
+            </p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="why-section" style="text-align:center; background: var(--gradient-primary); padding: 60px 20px; margin-top:40px;">
+    <h2 style="color:#fff;">Need a Custom Solution?</h2>
+    <p style="max-width:700px; margin: 0 auto 30px; color:#fff;">
+        Our team is ready to understand your requirements and deliver tailor-made solutions
+        that match your vision and budget.
+    </p>
+
+    <a href="/contact/" class="nav-btn" style="color:#fff; background:var(--accent-green);">Book a Consultation</a>
+</section>
+
+{% endblock %}

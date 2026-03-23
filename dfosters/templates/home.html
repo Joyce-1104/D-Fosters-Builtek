@@ -1,0 +1,148 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<!-- HERO -->
+<section class="hero">
+  <div class="slider">
+    <div class="slide slide1"></div>
+    <div class="slide slide2"></div>
+    <div class="slide slide3"></div>
+    <div class="slide slide4"></div>
+    <div class="slide slide5"></div>
+  </div>
+  <div class="hero-content">
+    <h1>Transforming Spaces Into Extraordinary Experiences</h1>
+
+    <div class="hero-buttons">
+      <a href="{% url 'contact' %}" class="btn-primary">BOOK A CONSULTATION</a>
+      <a href="{% url 'projects' %}" class="btn-outline">VIEW OUR PROJECTS</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE IMAGE / INTRO SECTION -->
+<section class="intro-section" data-animate>
+  <div class="intro-container">
+    <div class="intro-content reveal">
+      <h2 class="reveal">ABOUT US</h2>
+      <p>
+        We are a professionally established interior design and build company
+        providing end-to-end solutions including PVC works, modular kitchens, 3D
+        design visualization, wall planning, ceiling panels, false ceilings, and
+        floor paneling. Since 2012, we have been delivering reliable and
+        high-quality services across both the private and government sectors,
+        with a strong focus on functionality, durability, and modern aesthetics.
+        For private projects, we operate under the brand Eroline, offering
+        customized and contemporary interior solutions tailored to individual
+        client needs. For government projects, we work under the brand Sarvesh,
+        adhering strictly to regulatory standards, quality specifications, and
+        project timelines. With years of experience, skilled execution, and
+        trusted brand partnerships, we are committed to transforming spaces with
+        precision, professionalism, and lasting value.
+      </p>
+    </div>
+
+    <div class="intro-image reveal">
+      <img src="{% static 'images/BACK.png' %}" alt="Interior Design" />
+    </div>
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="mv-section">
+  <div class="image-box reveal">
+    <img src="{% static 'images/m.png' %}" alt="mission" />
+    <!--<h3>OUR MISSION</h3>
+    <p>
+      Our mission is to create thoughtfully designed interior and building solutions that combine functionality, aesthetics, and quality craftsmanship. We strive to understand each client's vision and transform it into elegant, comfortable, and practical spaces using innovative ideas, durable materials, and attention to detail, while consistently delivering value and customer satisfaction.
+    </p>-->
+  </div>
+
+  <div class="image-box reveal">
+    <img src="{% static 'images/v.png' %}" alt="vision" />
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="stat reveal">
+    <h2 class="counter" data-target="20000">0</h2>
+    <p>HAPPY CUSTOMERS</p>
+  </div>
+  <div class="stat reveal">
+    <h2 class="counter" data-target="200">0</h2>
+    <p>GOVERNMENT PROJECTS</p>
+  </div>
+  <div class="stat reveal">
+    <h2 class="counter" data-target="19800">0</h2>
+    <p>PRIVATE PROJECTS</p>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-title">
+  <h2 class="reveal">WHY CHOOSE US ?</h2>
+
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <h4>QUALITY WORK</h4>
+      <p>Premium materials and attention to detail in every project.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <h4>EXPERIENCED TEAM</h4>
+      <p>Skilled professionals with years of industry experience.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <h4>ON-TIME DELIVERY</h4>
+      <p>We respect deadlines and deliver projects as promised.</p>
+    </div>
+  </div>
+</section>
+<section class="testimonials-section">
+  <div class="testimonials-header reveal">
+    <h2>WHAT OUR CLIENTS SAY</h2>
+    <strong><p>Real experiences from our happy customers</p></strong>
+  </div>
+  <div class="testimonial-wrapper">
+    <div class="testimonial-track">
+      <!-- ORIGINAL SET -->
+      <div class="testimonial-card">
+        <p>“Excellent interior work and premium finish.”</p>
+        <h4>— Rajesh Kumar</h4>
+        <span>Chennai</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>“Great window installation and neat finishing.”</p>
+        <h4>— Priya S</h4>
+        <span>Madurai</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>“Very professional team and quality materials.”</p>
+        <h4>— Arjun</h4>
+        <span>Dindigul</span>
+      </div>
+
+      <!-- DUPLICATE SET (EXACT SAME ORDER) -->
+      <div class="testimonial-card">
+        <p>“Excellent interior work and premium finish.”</p>
+        <h4>— Joyce</h4>
+        <span>Arani</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>“Great window installation and neat finishing.”</p>
+        <h4>—Sasikala</h4>
+        <span>Coimbatore</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>“Very professional team and quality materials.”</p>
+        <h4>— varun</h4>
+        <span>Theni</span>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

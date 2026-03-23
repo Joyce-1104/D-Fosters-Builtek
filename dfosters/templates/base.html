@@ -1,0 +1,143 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D-FOSTERS BUILTEK</title>
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+<header class="header">
+    <div class="header-container">
+        <div class="brand-text">D-FOSTERS BUILTEK
+        </div>
+
+        <nav class="nav-wrapper">
+            <div class="nav-links">
+                <a href="{% url 'home' %}" class = {% if request.path == '/' %}active{% endif %}>HOME</a>
+                <a href="{% url 'services' %}" class = {% if request.path == '/services/' %}active{% endif %}>SERVICES</a>
+                <a href="{% url 'projects' %}" class = {% if request.path == '/projects/' %}active{% endif %}>PROJECTS</a>
+                <a href="{% url 'contact' %}" class = {% if request.path == '/contact/' %}active{% endif %}>CONTACT</a>
+            </div>
+            <a href="{% url 'contact' %}" class="nav-btn">GET AN ESTIMATE</a>
+        </nav>
+    </div>
+</header>
+
+<div class="main-content">
+{% block content%}
+{% endblock%}
+</div>
+<footer class="footer-modern">
+    <div class="footer-container">
+
+        <div class="footer-about">
+            <h3>D-FOSTERS BUILTEK</h3>
+            <p>
+                Premium interior, modular kitchen, ceiling & architectural solutions
+                delivering elegance, durability, and precision since 2012.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="/">Home</a>
+            <a href="/services/">Services</a>
+            <a href="/projects/">Projects</a>
+            <a href="/contact/">Contact</a>
+        </div>
+
+        <div class="footer-cta">
+            <h4>Planning a Project?</h4>
+            <a href="/contact/" class="footer-btn">Get an Estimate</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 DFOSTERS BUILTEK. All Rights Reserved.
+    </div>
+</footer>
+
+<script>
+  const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', () => {
+    const navWrapper = document.querySelector('.nav-wrapper');
+    if (window.scrollY > 60) {
+      header.classList.add('scrolled');
+      navWrapper.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+
+
+
+<script>
+const counters = document.querySelectorAll(".counter");
+
+const runCounter = el => {
+    const target = +el.dataset.target;
+    let count = 0;
+    const step = target / 200;
+
+    const update = () => {
+        count += step;
+        if (count < target) {
+            el.innerText = Math.floor(count);
+            requestAnimationFrame(update);
+        } else {
+            el.innerText = target + "+";
+        }
+    };
+    update();
+};
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            runCounter(e.target);
+            observer.unobserve(e.target);
+        }
+    });
+}, { threshold: 0.6 });
+
+counters.forEach(c => observer.observe(c));
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".fade-in-up").forEach(el => {
+    el.classList.add("animate");
+  });
+});
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target); // animate once
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    reveals.forEach(el => observer.observe(el));
+  });
+</script>
+
+
+
+</body>
+</html>
