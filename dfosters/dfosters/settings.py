@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(6wpv#fej-6-s92rukr8ic%_3i*6d^d(teq(yai25@s^*csd8y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['d-fosters-builtek.onrender.com']
 
 
 # Application definition
@@ -130,7 +130,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
